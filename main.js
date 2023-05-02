@@ -12,7 +12,10 @@ Components[0] = new CanvasComponents({
   position: new Vector2(GameArea.x / 2, GameArea.y / 2),
 });
 Components[0].update = function () {
-  this.rotate += 10;
+  this.rotate += -10
+  this.position.x +=10
+  this.motion.y +=3
+  this.position.y += this.motion.y;
 };
 
 function update() {
